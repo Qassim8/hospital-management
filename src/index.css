@@ -1,3 +1,56 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .fc-daygrid-day {
+    @apply rounded-md overflow-hidden;
+  }
+    .fc-col-header-cell {
+    @apply !p-5 bg-slate-300 text-slate-700 font-medium text-sm border border-slate-500 rounded-md;
+  }
+
+  /* النص داخل رأس العمود */
+  .fc-col-header-cell-cushion {
+    @apply py-2 block text-center;
+  }
+
+  /* الجدول نفسه */
+  .fc-scrollgrid {
+    @apply border border-slate-500 rounded-xl;
+  }
+}
+
+nav .active{
+    color: #6366f1;
+    background-color: #6366f133;
+    font-weight: bold;
+    border-right: 2px solid #6366f1;
+}
+
+/* styles.css */
+.fc .fc-daygrid-day {
+  background-color: #f9fafb; /* خلفية الأيام */
+  font-size: 12px;            /* تصغير الخط */
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+  background-color: #dbeafe !important; /* اليوم الحالي */
+}
+.fc .fc-button-primary{
+    background-color: #4f46e5 !important; 
+    border: none !important;
+}
+.fc .fc-event {
+  background-color: #4f46e5 !important; 
+  border: none;
+  font-size: 10px;
+  padding: 2px 4px;
+  cursor: pointer;
+}
+
+/* تقليل ارتفاع كل خلية */
+.fc .fc-daygrid-day-frame {
+  min-height: 60px !important;
+  padding: 2px !important;
+}
